@@ -1,0 +1,95 @@
+.markdown {
+  @apply text-lg leading-relaxed text-ink-700 dark:text-slate-100;
+}
+
+.markdown p,
+.markdown ul,
+.markdown ol,
+.markdown blockquote {
+  @apply my-6;
+}
+
+.markdown h2 {
+  @apply mt-16 mb-6 font-display text-3xl leading-tight text-ink-900 dark:text-white md:text-4xl;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.markdown h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 4rem;
+  height: 0.25rem;
+  border-radius: 9999px;
+  background: linear-gradient(
+    120deg,
+    rgba(180, 83, 9, 0.65),
+    rgba(67, 61, 103, 0.55)
+  );
+}
+
+.markdown h3 {
+  @apply mt-12 mb-4 font-display text-2xl leading-tight text-ink-800 dark:text-white;
+}
+
+.markdown h4 {
+  @apply mt-8 mb-3 text-xl font-semibold text-ink-700 dark:text-slate-100;
+}
+
+.markdown a {
+  @apply font-semibold text-rust underline decoration-rust/50 underline-offset-4 transition-colors duration-200 hover:text-[#8c3f07] hover:decoration-rust;
+}
+
+.markdown strong {
+  @apply font-semibold text-ink-900 dark:text-white;
+}
+
+.markdown em {
+  @apply italic text-dusk;
+}
+
+.markdown ul {
+  @apply list-disc space-y-2 pl-6 text-ink-700 dark:text-slate-100;
+}
+
+.markdown ol {
+  @apply list-decimal space-y-2 pl-6 text-ink-700 dark:text-slate-100;
+}
+
+.markdown blockquote {
+  @apply my-10 border-l-4 border-rust/70 bg-sand-100/70 px-6 py-3 text-base italic text-ink-700 dark:border-white/20 dark:bg-white/10 dark:text-slate-100;
+}
+
+.markdown code {
+  @apply rounded-md bg-sand-100 px-2 py-1 text-sm font-mono text-ink-700 dark:bg-white/10 dark:text-white;
+}
+
+.markdown pre {
+  @apply my-10 overflow-x-auto rounded-3xl bg-[#1f1a14] p-6 text-sm text-sand-50 shadow-soft;
+}
+
+.markdown pre code {
+  @apply bg-transparent p-0 text-sm text-sand-50;
+}
+
+.markdown img {
+  @apply my-10 w-full rounded-4xl border border-sand-200/70 shadow-soft-lg dark:border-white/10;
+}
+
+.markdown hr {
+  @apply my-12 border-0 h-px bg-gradient-to-r from-transparent via-sand-300 to-transparent dark:via-white/15;
+}
+
+.markdown table {
+  @apply my-8 w-full border-collapse overflow-hidden rounded-2xl border border-sand-200/70 dark:border-white/10 dark:bg-white/5;
+}
+
+.markdown th {
+  @apply bg-sand-100/80 px-4 py-3 text-left text-sm font-semibold uppercase tracking-[0.15em] text-ink-600 dark:bg-white/10 dark:text-slate-100;
+}
+
+.markdown td {
+  @apply border-t border-sand-200/70 px-4 py-3 text-sm text-ink-700 dark:border-white/10 dark:text-slate-100;
+}
