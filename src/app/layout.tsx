@@ -2,6 +2,7 @@ import Footer from "@/app/_components/footer";
 import type { Metadata } from "next";
 import { Manrope, Playfair_Display } from "next/font/google";
 import cn from "classnames";
+import { Analytics } from '@vercel/analytics/next';
 
 import "./globals.css";
 
@@ -38,6 +39,7 @@ export default function RootLayout({
         <div className="flex min-h-screen flex-col">
           <div className="flex-1">{children}</div>
         </div>
+        <Analytics />
       </body>
     </html>
   );
